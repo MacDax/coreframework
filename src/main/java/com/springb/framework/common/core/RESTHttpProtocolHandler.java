@@ -121,6 +121,7 @@ public class RESTHttpProtocolHandler implements ProtocolHandler {
 					}
 					Header header = arg19[arg21];
 					responseHeader.put(header.getName(), header.getValue());
+					++arg21;
 				}
 			}catch(Exception ex) {
 				ex.printStackTrace();

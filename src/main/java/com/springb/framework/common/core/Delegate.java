@@ -110,7 +110,7 @@ public class Delegate<R extends RequestTO, S extends ResponseTO> {
 				this.responseBuilder.processResponseHeaders(rawResponseMap.get(PROTOCOL_DATA_ELEMENTS.HEADER), response);
 			}
 			if(rawResponseMap.get(PROTOCOL_DATA_ELEMENTS.RESPONSE) != null) {
-				this.responseBuilder.processResponse(rawResponseMap.get(PROTOCOL_DATA_ELEMENTS.RESPONSE));
+				response = this.responseBuilder.processResponse(rawResponseMap.get(PROTOCOL_DATA_ELEMENTS.RESPONSE));
 			}
 		}else{
 			response = this.responseBuilder.processResponse(messageStatus.getStatusDescription());
