@@ -1,2 +1,2 @@
 # coreframework
-core codebase to create client connection code
+core codebase to create common webservice-client-connection
