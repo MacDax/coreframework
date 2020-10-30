@@ -49,7 +49,7 @@ public class RESTHttpProtocolHandler implements ProtocolHandler {
 		StringBuilder requestParams = (new StringBuilder("Received request with URI :")).append(this.baseEndPointUrl)
 				.append(", request params : ").append(requestMap.toString());
 		Object payloadObj = requestMap.get(PROTOCOL_DATA_ELEMENTS.PAYLOAD);
-		HTTP_ENTITY_TYPE contentType = null != requestMap.get(REST_PROTOCOL_DATA_ELEMENTS.CONTENT_BODY) ?
+		HTTP_ENTITY_TYPE contentType = null == requestMap.get(REST_PROTOCOL_DATA_ELEMENTS.CONTENT_BODY) ?
 				(HTTP_ENTITY_TYPE.CONTENT_BODY) : HTTP_ENTITY_TYPE.URL_FORM_HTTP_ENTITY;
 		Object connectionMethod;
 		String strGetResponseBody;
